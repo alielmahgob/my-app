@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from "../environments/environment"
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,9 @@ export class AppComponent {
 
   onSelectFeature(event: string) {
     this.selectedFeature = event
+  }
+
+  getEnv(): string {
+    return environment.API_URL
   }
 }
